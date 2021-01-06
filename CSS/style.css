@@ -105,6 +105,7 @@
 }
 .text a:hover{
     letter-spacing: 6px;
+    background: #ddd;
 }
 .social{
     position: absolute;
