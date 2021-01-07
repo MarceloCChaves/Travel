@@ -54,22 +54,30 @@
 }
 .contact-text{
     position: absolute;
-    top: 5%;
+    top: 0;
     z-index: 1;
     width: 85%;
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 32px;
+    
 }
 .contact-text h1{
     font-size: 3.5em;
     font-weight: 800;
 }
+.contact-text h1::after{
+    content: "";
+    width: 600px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    margin: 20px auto;
+}
 .contacts{
     position: absolute;
-    top: 25%;
+    top: 0;
     left: 50%;
     transform: translate(-50% , 50%);
     width: 70%;
@@ -125,9 +133,43 @@
 .menu ul li a:hover{
     color: #03a9f4;
 }
-@media(max-width: 798px){
+@media(max-width: 1024px){
     .showcase, .showcase header{
         padding: 40px;
+    }
+    .contact-text h1{
+        font-size: 2em;
+    }
+    .contact-text h1::after{
+        content: "";
+        width: 250px;
+        height: 4px;
+        background: #fff;
+        display: block;
+        margin: 20px auto;
+    }
+    .contacts{
+        margin-top: 56px;
+    }
+}
+@media(width: 360px){
+    .contacts{
+        margin-top: 12px;
+    }
+}
+@media(width: 414px){
+    .contacts{
+        margin-top: 32px;
+    }
+}
+@media(width: 768px ){
+    .contacts{
+        margin-top: 128px;
+    }
+}
+@media(width: 1024px ){
+    .contacts{
+        margin-top: 256px;
     }
 }
 @media(min-width: 1080px){
